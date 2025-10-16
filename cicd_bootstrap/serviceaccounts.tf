@@ -1,5 +1,6 @@
 module "service_account_dev" {
   source        = "terraform-google-modules/service-accounts/google"
+  version       = "~> 4.6"
   project_id    = var.dev-project-id
   names = ["terraform-cloud"]
   generate_keys = true
@@ -10,6 +11,7 @@ module "service_account_dev" {
 
 module "service_account_qa" {
   source        = "terraform-google-modules/service-accounts/google"
+  version       = "~> 4.6"
   project_id    = var.qa-project-id
   names = ["terraform-cloud"]
   generate_keys = true
